@@ -2,7 +2,7 @@
   <div class="p-5">
     <q-btn label="Open Modal" color="primary" @click="modalRef?.show()" />
     
-    <AnModal
+    <AnqModal
       ref="modalRef"
       title="Example Modal"
       :persistent="false"
@@ -15,15 +15,15 @@
           <p>You can put any content here!</p>
         </div>
       </template>
-    </AnModal>
+    </AnqModal>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { AnModal } from './index';
+import { AnqModal } from './index';
 
-const modalRef = ref<InstanceType<typeof AnModal> | null>(null);
+const modalRef = ref<InstanceType<typeof AnqModal> | null>(null);
 
 const onModalOk = () => {
   console.log('Modal OK clicked');

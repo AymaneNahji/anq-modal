@@ -12,7 +12,7 @@ npm install anq-modal
 
 ```vue
 <template>
-  <AnModal
+  <AnqModal
     ref="modalRef"
     title="My Modal"
     @okClick="onModalOk"
@@ -20,14 +20,14 @@ npm install anq-modal
     <template #content>
       <div>Your content here</div>
     </template>
-  </AnModal>
+  </AnqModal>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { AnModal } from 'anq-modal';
+import { AnqModal } from 'anq-modal';
 
-const modalRef = ref<InstanceType<typeof AnModal> | null>(null);
+const modalRef = ref<InstanceType<typeof AnqModal> | null>(null);
 
 // Show modal
 modalRef.value?.show();
@@ -87,7 +87,7 @@ modalRef.value?.hide();
 
 ```vue
 <template>
-  <AnModal
+  <AnqModal
     ref="modalRef"
     title="Custom Modal"
     :persistent="true"
@@ -109,7 +109,7 @@ modalRef.value?.hide();
     <template #ok-btn="{ click, color, label }">
       <q-btn :color="color" :label="label" @click="click" />
     </template>
-  </AnModal>
+  </AnqModal>
 </template>
 ```
 
